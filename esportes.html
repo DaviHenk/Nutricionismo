@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <title>Roonutricionismo</title>
+      <link rel="icon" type="image/x-icon" href="imgs/logoEtec.ico">
+
+      <link rel="stylesheet" href="css/style-menu.css">
+      <link rel="stylesheet" href="css/style-esportes.css">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/all.css" >
+      
+      <script src="js/mobile-navbar-menu.js"></script>      
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap2.min.js"></script>
+      <!--script src="js/bootstrap.min.js"></script>-->
+      <script src="js/esportes.js"></script>
+   </head>
+   <body style="background-color: #e6e6e6;">
+      <nav class="shadow-sm p-3 mb-5 navbar navbar-expand-lg navbar-light bg-light fixed-top">
+         <div class="container-fluid">
+            <a class="navbar-brand" href="#">Roonutricionismo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                     <a class="nav-link" href="index.html">INÍCIO</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="listareceitas.php">ALIMENTOS</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="esportes.html"><b>ESPORTES</b></a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="sobre.html">SOBRE NÓS</a>
+                  </li>
+               </ul>
+               <form class="d-flex">
+                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                 <button class="btn btn-outline-success" type="submit" style="width:40px;height:40px;background:url(imgs/lupa2.png) center no-repeat;background-size: 35px 100%;"> </button>
+               </form>
+            </div>
+         </div>
+      </nav>
+
+      <!-- Barra de modalidades -->
+      <ul class="nav nav-tabs" id="myTab" role="tablist" style="position: relative; width: 50%; float: none; margin: auto; top: 80px;">
+         <li class="nav-item" role="presentation">
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false" style="font-family: Arial, Helvetica, sans-serif; color: black;font-size: x-large" onclick="document.getElementById('pop').style.display='none';Modalidade(1);">Tenis</button>
+         </li>
+         <li class="nav-item" role="presentation">
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false" style="font-family: Arial, Helvetica, sans-serif;color: black;font-size: x-large" onclick="document.getElementById('pop').style.display='none';Modalidade(2);">Basquete</button>
+         </li>
+         <li class="nav-item" role="presentation">
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false" style="font-family: Arial, Helvetica, sans-serif;color: black;font-size: x-large" onclick="document.getElementById('pop').style.display='none';Modalidade(3);">Voleibol</button>
+         </li>
+         <li class="nav-item" role="presentation">
+            <button class="nav-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true" style="font-family: Arial, Helvetica, sans-serif;color: black;font-size: x-large" onclick="document.getElementById('pop').style.display='none';Modalidade(4);">Corrida</button>
+         </li>
+         <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false" style="font-family: Arial, Helvetica, sans-serif;color: black;font-size: x-large" onclick="document.getElementById('pop').style.display='none';Modalidade(5);">Futebol</button>
+         </li>
+         <li class="nav-item" role="presentation">
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false" style="font-family: Arial, Helvetica, sans-serif;color: black;font-size: x-large" onclick="document.getElementById('pop').style.display='none';Modalidade(6);">Natação</button>
+         </li>
+      </ul>
+      <!--div class="tab-content" id="myTabContent">
+         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+      </div-->
+
+      <div id="div_inicial" style="width: 23rem; margin: 0 auto 110px auto; top:100px; display:block">
+      </div>
+      <div class="card car" id="div_info" style="width: 23rem; margin: 0 auto 110px auto; top:100px; display:none">
+         <img class="card-img-top" id="info_img" src="imgs/corrida.png" alt="Imagem de capa do card">
+         <div class="card-body">
+            <h3 id="info_mod" align="center">Modalidade: Corrida</h3>
+            <h4 id="info_intro" align="center">Pequena introdução</h4>
+            <p id="info_res" align="center" style="position: relative; text-align: justify; width:90%; height:50%; left:5%; font-size: xx-large; font-family: Arial, Helvetica, sans-serif; font-size: clamp(0em, 0em + 3vw, 1.5em);">Atletismo é um esporte de marca que engloba uma série de modalidades esportivas como as corridas, os saltos e os arremessos.
+        As provas de atletismo podem ser disputadas no campo, na rua ou numa pista no estádio, individualmente ou por revezamento de atletas.<br>
+        A maratona, considerada uma das mais importantes disputas olímpicas e encerra o evento, é uma das provas do atletismo.
+      https://www.significados.com.br/atletismo/</p>
+            <center><button class="btn btn-primary" id="info_btn">Mostrar</button></center>
+         </div>
+      </div> 
+      <div id="pop" class="pop2">
+         <iframe src="blankpage.html" id="iframe_a" height="87%" width="100%" title="Iframe Example" style="border:none;"></iframe>
+         <center><button class="btn btn-primary" onclick="document.getElementById('pop').style.display='none';">Fechar</button></center>
+      </div> 
+
+
+      <!--div class="shadow-sm p-3 mb-5 bg-body rounded d-flex p-2 bd-highlight position-relative top-1 start-50 translate-middle-x" style="height: 800px ; width: 850px; top: 100px" >
+         <img src="imgs/omega.jpg" class="rounded mx-auto d-block shadow p-3 mb-5" alt="omega." style="position: relative; top: 10px; height: 300px;">
+      </div>
+      <p class="text-center" style="position:relative;bottom: 300px; font-size: xx-large; font-family: Arial, Helvetica, sans-serif; opacity: 0.8;">Modalidade: Corrida</p>
+      <p class="text-center" style="position:relative;bottom: 300px; font-family: Arial, Helvetica, sans-serif; opacity: 0.8;">Pequena introdução</p>
+
+      <div class="d-inline-flex p-2 bd-highlight" align="center" style="position: relative; text-align: justify; bottom: 300px; opacity: 0.8; width:50%; height:50%; left:25%; font-size: xx-large; font-family: Arial, Helvetica, sans-serif; font-size: clamp(0em, 0em + 3vw, 1.5em);">
+        Atletismo é um esporte de marca que engloba uma série de modalidades esportivas como as corridas, os saltos e os arremessos.
+        As provas de atletismo podem ser disputadas no campo, na rua ou numa pista no estádio, individualmente ou por revezamento de atletas.<br>
+        A maratona, considerada uma das mais importantes disputas olímpicas e encerra o evento, é uma das provas do atletismo.
+      https://www.significados.com.br/atletismo/
+
+
+      </div-->
+
+
+      <!-- Parte do Rodapé-->
+
+      <!--footer starts from here-->
+      <footer class="footer" style="">
+         <div class="container bottom_border shadow p-3 mb-5">
+            <div class="row">
+
+               <div class=" col-sm-4 col-md  col-12 col">
+                  <h5 class="headin5_amrc col_white_amrc pt2">Posts Populares</h5>
+                  <!--headin5_amrc ends here-->
+
+                  <ul class="footer_ul2_amrc">
+                     <li><a href="#"><i class="fab  fleft padding-right"></i></a>
+                         <p>Nome do alimento<a href="#"></a></p></li>
+                     
+                     <hr style="color: grey;">
+
+                     <li><a href="#"><i class="fab  fleft padding-right"></i></a>
+                         <p>Nome do esporte<a href="#"></a></p></li>
+                     <!--footer_ul2_amrc ends here-->
+                  </ul>
+               </div>
+
+               <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+                  <h5 class="headin5_amrc col_white_amrc pt2">Sobre Nós</h5>
+                  <!--headin5_amrc-->
+                  <p class="mb10">Esse é o site do grupo de TCC Réquiem da Etec Parque da Juventude. Este site visa orientar atletas que desejam ter recomendações de receitas de acordo com o esporte que praticam.</p>
+               </div>
+
+               <div class=" col-sm-4 col-md  col-6 col">
+                  <h5 class="headin5_amrc col_white_amrc pt2">Nos Contate</h5>
+                  <!--headin5_amrc-->
+                  
+                  <ul class="footer_ul_amrc">
+                     <p class="mb10">Para o esclarecimento de dúvidas, entre em contato conosco, pelas redes sociais, por e-mail ou através dos nossos números de contatos.</p>
+                     <p><i class="fa fa-location-arrow"></i> São Paulo, Brasil </p>
+                     <p><i class="fa fa-phone"></i>  +55 (11) 1234-5678 </p>
+                     <p><i class="fa fa fa-envelope"></i> Exemplo@gmail.com  </p>
+                  </ul>
+                  <!--footer_ul_amrc ends here-->
+               </div>
+            </div>
+         </div>
+
+         <!--foote_bottom_ul_amrc ends here-->
+
+         <!--social_footer_ul ends here-->
+         <div class=" col-sm-4 col-md col-sm-4  col-12 col" style="color: #fff;">
+            <p class="mb10" style="position: relative; left: 5%;">©Tcc 2021. Direitos reservados por Réquiem</p>
+         </div>
+
+      </footer>
+   </body>
+</html>

@@ -1,0 +1,215 @@
+﻿body {
+   background-position: center;
+   background-size: cover;
+   background-color: #e6e6e6;
+}
+
+.tes {
+   position: relative;
+   @import url(Menu.html) (max-width:900px);
+   text-align: center;
+   padding: 25px;
+   margin: auto;
+}
+
+div.pop2 {
+   display:none;
+   position:fixed;
+   top:50%;
+   left:50%;
+   margin-left:-11.5rem;
+   margin-top:-200px;
+   padding:10px;
+   width:23rem;
+   height:400px;
+   border:1px solid #d0d0d0;
+   background-color: #ffffff;
+   /* opacity: 0.9; */
+}
+
+/*CSS DA PARTE DE RECEITAS*/
+
+/*Css do Ul vertical*/
+.mod {
+   display: block;
+   color: #000;
+   padding: 8px 16px;
+   text-decoration: none;
+}
+
+/* Change the link color on hover */
+.mod:hover {
+   background-color: #555;
+   color: white;
+}
+
+/*Modifica a tabela do Ul*/
+ul.sep li {
+   padding: .5em 0;
+   border-bottom: 1px solid #CCC;
+}
+
+/*Css do Popup das receitas*/
+#pop1 {
+  display:none;
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-left:-250px;
+  margin-top:-200px;
+  padding:10px;
+  width:500px;
+  height:400px;
+  border:1px solid #d0d0d0;
+  background-color: #ffffff;
+  opacity: 0.9;
+}
+
+#pop2 {
+  display:none;
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-left:-250px;
+  margin-top:-200px;
+  padding:10px;
+  width:500px;
+  height:400px;
+  border:1px solid #d0d0d0;
+  background-color: #ffffff;
+  opacity: 0.8;
+}
+
+/*Responsividade de Divs*/
+@media(max-width: 800px) {
+   .box {
+      /*position: relative;*/
+      width: 20%;
+      overflow:;
+      background: #4679BD;*/
+   }
+}
+
+.cla {
+   font-size: clamp(1em, 1em + 1vw, 1.5em);
+   text-align: center;
+}
+
+/*Responsividade da Ul dos Tipos de */
+*{
+   margin: 0;
+   padding: 0;
+}
+
+.menu{
+   width: 25%;
+   font-family: 'Arial';
+}
+
+.menu ul{
+   list-style: none;
+   position: relative;
+   width: 65%;
+   left: 27px;
+}
+
+.menu ul li {
+   width: 100px;
+}
+
+.menu a {
+   padding: 15px;
+   display: block;
+   text-decoration: none;
+   text-align: center;
+   background-color: #fff;
+   color: #222;
+}
+
+.menu a:hover{
+   background-color: #f4f4f4;
+   color: #555;
+}
+
+label[for="bt_menu"]{
+   padding: 5px;
+   background-color: #222;
+   color: #fff;
+   font-family: "Arial";
+   text-align: center;
+   font-size: 30px;
+   cursor: pointer;
+   width: 50px;
+   height: 50px;
+}
+
+#bt_menu {
+   display: none;
+}
+
+label[for="bt_menu"]{
+   display: none;
+}
+
+@media(max-width: 800px) {
+   label[for="bt_menu"]{
+      display: block;
+   }
+
+   #bt_menu:checked ~ .menu{
+      margin-left: 0;
+   }
+
+   .menu{
+      margin-top: 5px;
+      margin-left: -100%;
+      transition: all .4s;
+   }
+
+   .menu ul li {
+      width: 100%;
+      float: none;
+   }
+}
+
+/*CSS do Card, onde está a receita*/
+
+/* Css do Rodapé*/
+
+.col_white_amrc { color:#FFF;}
+footer { width:100%; background-color:#263238; min-height:250px; padding:10px 0px 25px 0px ;}
+.pt2 { padding-top:40px ; margin-bottom:20px ;}
+footer p { font-size:13px; color:#CCC; padding-bottom:0px; margin-bottom:8px;}
+.mb10 { padding-bottom:15px ;}
+.footer_ul_amrc { margin:0px ; list-style-type:none ; font-size:14px; padding:0px 0px 10px 0px ; }
+.footer_ul_amrc li {padding:0px 0px 5px 0px;}
+.footer_ul_amrc li a{ color:#CCC;}
+.footer_ul_amrc li a:hover{ color:#fff; text-decoration:none;}
+.fleft { float:left;}
+.padding-right { padding-right:10px; }
+
+.footer_ul2_amrc {margin:0px; list-style-type:none; padding:0px;}
+.footer_ul2_amrc li p { display:table; }
+.footer_ul2_amrc li a:hover { text-decoration:none;}
+.footer_ul2_amrc li i { margin-top:5px;}
+
+.bottom_border { border-bottom:1px solid #323f45; padding-bottom:20px;}
+.foote_bottom_ul_amrc {
+   list-style-type:none;
+   padding:0px;
+   display:table;
+   margin-top: 10px;
+   margin-right: auto;
+   margin-bottom: 10px;
+   margin-left: auto;
+}
+.foote_bottom_ul_amrc li { display:inline;}
+.foote_bottom_ul_amrc li a { color:#999; margin:0 12px;}
+
+.social_footer_ul { display:table; margin:15px auto 0 auto; list-style-type:none;  }
+.social_footer_ul li { padding-left:20px; padding-top:10px; float:left; }
+.social_footer_ul li a { color:#CCC; border:1px solid #CCC; padding:8px;border-radius:50%;}
+.social_footer_ul li i {  width:20px; height:20px; text-align:center;}
+
+/* Credit to https://bootsnipp.com/snippets/bxDBA */
+

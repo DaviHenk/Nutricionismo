@@ -1,0 +1,50 @@
+﻿/*Css do Ul vertical*/
+.mod {
+   color: #000;
+   padding: 6px 8px;
+   text-decoration: none;
+}
+
+/*Modifica a tabela do Ul*/
+.titulo {
+   margin: 1px;
+   padding: 10px 0;
+   border-bottom: 1px solid #222;
+   width: 100%;
+}
+
+.titulo2 {
+   margin: 1px;
+   padding: 10px 0;
+   width: 100%;
+}
+
+.subtitulo {
+   margin: 1px;
+   padding: 6px 0;
+   font-style: italic;
+}
+
+.subtitulo2 {
+   margin: 1px;
+   padding: 3px 0 3px 10px;
+   font-style: bold;
+}
+
+.texto {
+   margin: 1px;
+   padding: 6px 0;
+   font-style: normal;
+}
+
+.lista {
+   list-style-type: default;
+   margin: 0 8px;
+   padding: 4px 0 4px 16px;
+}
+
+.lista2 {
+   list-style-type: default;
+   margin: 0 8px;
+   padding: 4px 0 4px 26px;
+}
